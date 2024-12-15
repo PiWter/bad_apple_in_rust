@@ -6,16 +6,15 @@ fn main() {
     preload_images();
 }
 
-struct Frames {
+/*struct Frames {
     frame: Vec<String>,
     image_x_pixels: u32,
     image_y_pixels: u32
-}
-
+}*/
 fn preload_images(){
     let mut frames: Vec<DynamicImage> = Vec::new();
 
-    for f in 6000..=6562{
+    for f in 1..=6562{
         println!("Loading frame {} / 6562", f);
         let mut frame_path: String = String::from("image_sequence/bad_apple_");
         let file_number = f.to_string();
@@ -28,7 +27,7 @@ fn preload_images(){
     }
     let image_x_pixels = frames[0].width();
     let image_y_pixels = frames[0].height();
-    bad_apple(9, image_x_pixels, image_y_pixels, frames);
+    bad_apple(4, image_x_pixels, image_y_pixels, frames);
 }
 
 fn bad_apple(downscaling: u32, image_x_pixels: u32, image_y_pixels: u32, frames: Vec<DynamicImage>){
