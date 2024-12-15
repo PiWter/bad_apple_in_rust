@@ -4,7 +4,7 @@ use image::*;
 
 fn main() {
     for f in 100..=6562 {
-        let mut frame_path: String = String::from(r"C:\Users\alfre\Desktop\image_sequence\bad_apple_");
+        let mut frame_path: String = String::from("image_sequence/bad_apple_");
         let file_number = f.to_string();
         for n in file_number.chars() {
             frame_path.push(n);
