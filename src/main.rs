@@ -37,17 +37,14 @@ fn bad_apple(downscaling: u32, image_x_pixels: u32, image_y_pixels: u32, frames:
         for y in 1..image_y_pixels {
             for x in 1..image_x_pixels {
                 if y % (downscaling * 2) == 0 && x % (downscaling * 2) == 0{
-                    if f.get_pixel(x, y)[0] <= 200 && f.get_pixel(x, y)[1] <= 200 && f.get_pixel(x, y)[2] <= 200{// Rgba([0, 0, 0, 255]){
-                        //print!("  ");
+                    if f.get_pixel(x, y)[0] <= 200 && f.get_pixel(x, y)[1] <= 200 && f.get_pixel(x, y)[2] <= 200{
                         frame += "  ";
                     } else {
-                        //print!("+ ");
                         frame += "+ ";
                     }
                 }
             }
             if y % (downscaling * 2) == 0{
-                //println!("");
                 frame += "\n";
             }
         }
