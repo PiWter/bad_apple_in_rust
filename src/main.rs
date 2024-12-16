@@ -37,6 +37,7 @@ fn bad_apple(downscaling: u32, image_x_pixels: u32, image_y_pixels: u32, frames:
     let mut start = String::new();
     let mut ascii_frames: Vec<String> = Vec::new();
     let mut frame: String;
+    println!("Just a bit more :)");
     for f in frames {
         frame = "".to_string();
         for y in 1..image_y_pixels {
