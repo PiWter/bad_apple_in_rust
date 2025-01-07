@@ -32,7 +32,7 @@ fn preload_frames() -> Vec<String>{
         }
         frame_path += ".png";
 
-        ascii_frames.push(image_to_ascii(&frame_path, 4));
+        ascii_frames.push(image_to_ascii(&frame_path, 8));
     }
     ascii_frames
 }
