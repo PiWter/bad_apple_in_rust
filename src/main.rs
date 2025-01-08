@@ -32,7 +32,7 @@ fn preload_frames() -> Vec<String>{
         }
         frame_path += ".png";
 
-        ascii_frames.push(image_to_ascii(&frame_path, 8));
+        ascii_frames.push(image_to_ascii(&frame_path, 4));
     }
     ascii_frames
 }
@@ -48,7 +48,7 @@ fn image_to_ascii(frame_path: &String, downscaling: u32) -> String{
                 if img_frame.get_pixel(x, y)[0] <= 200 && img_frame.get_pixel(x, y)[1] <= 200 && img_frame.get_pixel(x, y)[2] <= 200{
                     ascii_frame += "  ";
                 } else {
-                    ascii_frame += "+ ";
+                    ascii_frame += "██";
                 }
             }
         }
